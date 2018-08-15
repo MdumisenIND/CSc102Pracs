@@ -1,0 +1,26 @@
+﻿<Window x:Class="Task4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task4"
+        mc:Ignorable="d"
+        Title="Turtles and Shapes" Height="507" Width="1099">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="956*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="canvas" HorizontalAlignment="Stretch" Height="Auto" Margin="12,70,27,10" VerticalAlignment="Stretch" Width="Auto" Background="#FF0CF1DD" Grid.Column="1"/>
+        <Button x:Name="btnTriangles" Content="Draw Triangles" HorizontalAlignment="Left" Margin="12,35,0,0" VerticalAlignment="Top" Width="108" Height="30" FontWeight="Bold" Click="btnTriangles_Click" Grid.Column="1" ToolTip="Draws the pattern of interlocking triangles a number of times depending on combo box value"/>
+        <ComboBox x:Name="cmbNum" HorizontalAlignment="Left" Margin="324,35,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontSize="14" Grid.Column="1" ToolTip="Selects the number of times to draw the pattern">
+            <ComboBoxItem Content="1" Selected="ComboBoxItem_Selected"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
+        <Label x:Name="lblNumPatterns" Content="Number:" HorizontalAlignment="Left" Margin="255,32,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="140,35,0,0" VerticalAlignment="Top" Width="85" Height="30" FontWeight="Bold" Click="btnClear_Click" Grid.Column="1" ToolTip="Clears the canvas and returns tess home"/>
+    </Grid>
+</Window>

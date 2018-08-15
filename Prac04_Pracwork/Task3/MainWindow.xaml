@@ -1,0 +1,26 @@
+﻿<Window x:Class="Task3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task3"
+        mc:Ignorable="d"
+        Title="Turtles and Shapes" Height="786" Width="818" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="btnCircle" Content="Circle" HorizontalAlignment="Left" Margin="33,47,0,0" VerticalAlignment="Top" Width="83" Height="34" Click="btnCircle_Click" FontWeight="Bold"/>
+        <Slider x:Name="sliBrushWidth" HorizontalAlignment="Left" Margin="660,23,0,0" VerticalAlignment="Top" Width="133" ValueChanged="Slider_ValueChanged" Maximum="20" Minimum="1" IsSnapToTickEnabled="True" Interval="1" AllowDrop="True" TickPlacement="BottomRight"/>
+        <Label x:Name="lblSlider" Content="Brush Width:" HorizontalAlignment="Left" Margin="520,20,0,0" VerticalAlignment="Top" Width="135" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="lblWidth" Content="Width value:" HorizontalAlignment="Left" Margin="662,0,0,0" VerticalAlignment="Top" Width="84" FontWeight="Bold"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="260,48,0,0" VerticalAlignment="Top" Width="93" Height="32" FontWeight="Bold" Click="btnClear_Click" RenderTransformOrigin="0.355,0.562"/>
+        <Button x:Name="btnHouse" Content="House" HorizontalAlignment="Left" Margin="141,48,0,0" VerticalAlignment="Top" Width="94" Height="32" FontWeight="Bold" Click="btnHouse_Click"/>
+        <Label x:Name="lblSize" Content="Size:" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="cmbSize" HorizontalAlignment="Left" Margin="85,14,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbSize_SelectionChanged">
+            <ComboBoxItem x:Name="S" Content="Small" FontWeight="Bold" Selected="S_Selected"/>
+            <ComboBoxItem x:Name="M"  Content="Medium" FontWeight="Bold" Selected="M_Selected"/>
+            <ComboBoxItem x:Name="L"  Content="Large" FontWeight="Bold" Selected="L_Selected"/>
+        </ComboBox>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="640" Margin="30,95,0,0" VerticalAlignment="Top" Width="760" Background="#FF94F57E"/>
+        <TextBox x:Name="Txtbox" Text="{Binding ElementName=sliBrushWidth, Path=Value, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="19" Margin="746,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.149,-0.601" TextAlignment="Center"/>
+
+    </Grid>
+</Window>
